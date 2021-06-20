@@ -1,0 +1,42 @@
+<div class="content" role="main">
+    
+    <p><a routerLink = "/register" href = "#" >Create Account</a> | <a routerLink = "/withdraw" >Withdraw</a> |  <a href = "/deposit" >Diposit</a></p>
+    
+    <mat-card class="card">
+        <h2 class = "title-text">Make Withdrawal</h2>
+        <form #withdrawDetails = "ngForm" class="example-form" (ngSubmit)="postAccountDetails(withdrawDetails)">
+            <mat-form-field class="example-full-width">
+                <mat-label>Account Type</mat-label>
+                <mat-select disableRipple name = "accountType" [(ngModel)] = "userPersonalDetails.depositAmount">
+                  <mat-option value="CURRENTACCOUNT">Current Account</mat-option>
+                  <mat-option value="SAVINGSACCOUNT">Savings Account</mat-option>
+                </mat-select>
+              </mat-form-field>
+              
+            <table class="example-full-width" cellspacing="0"><tr>
+            
+              <td  class = "row"><mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput name = "email" [(ngModel)] = "userPersonalDetails.email">
+              </mat-form-field></td>
+            </tr> 
+          
+            <tr> 
+             
+              <td  class = "row"><mat-form-field class="example-full-width">
+                <mat-label>Deposit Amount</mat-label>
+                <input matInput name = "amount" [(ngModel)] = "userPersonalDetails.withdrawAmount">
+              </mat-form-field></td>
+            </tr>
+            
+          </table>
+       
+          <button mat-button color="primary">Execute Withdrawal</button>
+          </form>
+
+  </mat-card>
+  
+  <div>
+
+  </div>
+  </div>

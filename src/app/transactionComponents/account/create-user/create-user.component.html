@@ -1,0 +1,52 @@
+  <div class="content" role="main">
+    <p><a  href = "#" >Create Account</a> | <a routerLink = "/withdraw" >Withdraw</a> |  <a href = "/deposit" >Deposit</a></p>
+    
+  
+    <mat-card class="card">
+        <h2 class = "title-text">Register New Account</h2>
+      <form  #accountDetails = "ngForm" class="example-form" (ngSubmit)="postAccountDetails(accountDetails)">
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td class = "row"><mat-form-field class="example-full-width" >
+        <mat-label>First name</mat-label>
+        <input matInput name = "name" [(ngModel)] = "userPersonalDetails.name">
+      </mat-form-field></td>
+      
+      <td  class = "row"><mat-form-field class="example-full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput name = "surname" [(ngModel)] = "userPersonalDetails.surname">
+      </mat-form-field></td>
+    </tr> 
+  
+    <tr>
+      <td class = "row"><mat-form-field class="example-full-width" >
+        <mat-label>Email</mat-label>
+        <input matInput name = "email" [(ngModel)] = "userPersonalDetails.email">
+      </mat-form-field></td>
+      
+      <td  class = "row"><mat-form-field class="example-full-width">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput name = "dob" [(ngModel)] = "userPersonalDetails.dob">
+      </mat-form-field></td>
+    </tr>
+
+    <tr>
+        <td class = "row"><mat-form-field class="example-full-width" >
+          <mat-label>Current Account Deposit</mat-label>
+          <input matInput name = "depositSavingsAmount" [(ngModel)] = "userPersonalDetails.depositSavingsAmount">
+        </mat-form-field></td>
+        
+        <td  class = "row"><mat-form-field class="example-full-width">
+          <mat-label>Savings Account Deposit</mat-label>
+          <input matInput name = "currentDeposit"  [(ngModel)] = "userPersonalDetails.currentDeposit" >
+        </mat-form-field></td>
+      </tr>
+    
+  </table>
+  <button mat-button color="primary">Register Account</button>  
+  </form>
+  </mat-card>
+  
+  <div>
+  
+  </div>
+  </div>
